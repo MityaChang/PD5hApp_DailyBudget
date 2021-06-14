@@ -23,7 +23,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button btnSignUp;
     private Button btnSignIn;
 
-    //Firebase..
+    //Firebase
 
     private FirebaseAuth mAuth;
 

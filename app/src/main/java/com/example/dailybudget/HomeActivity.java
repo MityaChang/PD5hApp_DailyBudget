@@ -34,11 +34,10 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FloatingActionButton fab;
 
-    //Firebase..
+    //Firebase
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
 
-    //globar variable..
 
     private String title;
     private String description;
@@ -57,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference().child("AllData").child(uid);
 
 
-        //Recycler view..
+        //Recycler view
 
         recyclerView = findViewById(R.id.recyclerId);
 
@@ -122,8 +121,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "Data Inserted", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
-
-            }
+                         }
         });
 
         dialog.show();
@@ -214,7 +212,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnUpdate = myview.findViewById(R.id.btnUpdateUp);
         Button btnDelete = myview.findViewById(R.id.btnDeleteUpdate);
 
-        //we need to set our server data inside edit text..
+        //we need to set our server data inside edit text
 
         mTitle.setText(title);
         mTitle.setSelection(title.length());
