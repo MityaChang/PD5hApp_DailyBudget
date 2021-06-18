@@ -236,7 +236,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 DataCenter data = new DataCenter(title, description, budget, post_key, mDate);
                 mDatabase.child(post_key).setValue(data);
-
+                Toast.makeText(getApplicationContext(), "Update Success", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
@@ -246,7 +246,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 mDatabase.child(post_key).removeValue();
-
+                Toast.makeText(getApplicationContext(), "Delete Success", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
